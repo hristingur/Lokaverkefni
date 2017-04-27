@@ -5,29 +5,32 @@
 	<link rel="stylesheet" type="text/css" href="Contact.css">
 </head>
 <body>
-	<div class="upper">
-		<h1>We want to listen!</h1>
+	<div class="banner">
+		<img class="working" src="images/working.jpg" width="100%" height="100%">
+		<h1>Get in touch!</h1>
 		<h2>Please fill out all the labels and comment your thoughts.</h2>
 	</div>
 	<fieldset id="peep">
+		<div class="panel-left">
 		
-		
-			<form action="insert.php">
-			<p>
-				<label>Email:</label>
-				<input type="email" name="email" require="";>
-			</p>
-			<p>
-				<input class="lala" type="textbox" name="feedback" placeholder="What do you have to say?" required="">
-			</p>
-			<p>
-				<input type="submit" name="Send Now">
-			</p>
+			<form action="insert.php" method="post">
+			
+				<input type="text" required placeholder="Name" name="name" class="contact-form-field">
+				<input type="email" required placeholder="Your email address" name="email" class="contact-form-field">
+				<textarea required placeholder="Message" name="feedback" class="contact-form-field"></textarea>
+			
+			
+				<input type="submit" name="Send Now" value="Send">
+			
 
 
 			</form>
-
+			</div> <!-- endir a class panel-left-->
 
 	</fieldset>
+	<?php
+	echo"$netfang";
+	?>
+
 </body>
 </html>

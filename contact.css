@@ -1,17 +1,61 @@
 body{
-	width: 80%;
+	
 	margin: 0 auto;
-	background-color: skyblue;
+	background-color: #2b262b;
 	align-content: center;
 }
-.upper h1{
+.banner{
+	width: 100%;
+	height: 500px;
+}
+h1,h2{
+	position: relative;
+	bottom: 450px;
 	text-align: center;
 	font-size: 3em;
-	color: navy;
+	color: #393c00;
+	font-family: Tahoma, Geneva, sans-serif;
 }
+
 h2{
+	position: relative;
+	bottom: 450px;
 	text-align: center;
-	color: navy;
+	font-size: 2em;
+	color: #9b3b00;
+	font-family: Tahoma, Geneva, sans-serif;
+	
+}
+.panel-left{
+width: 50%;
+height: 400px;
+}
+#peep{
+border: none;
+}
+textarea{
+	  width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+input[type=text]{
+	 width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	
+}
+input[type=email]{
+	 width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 	
 }
 fieldset{
