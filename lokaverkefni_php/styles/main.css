@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+body {
+	display: flex;
+	flex-flow: row wrap;
+	width: 80%;
+	background: url(background5.jpg);
+}
+
+.banner {
+	order: 1;
+	background: url(bird.png), url(clouds.jpg);
+	background-position: 0px, 0px;
+	background-repeat: no-repeat, repeat;
+	width: 100%;
+	height: 140px;
+	animation: animate-background linear 4s infinite; 
+}
+
+	@keyframes animate-background {
+	from{ background-position: -70% 0px, 0px; }
+	to{ background-position: 1100px -70px, -300px; }
+}
+
+/*#bird {
+
+  background-position: -70px;
+  background-repeat: no-repeat;
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}*/
+
+.smallContainer{
+    display: none;
+}
+
+.numer1 {
+	order: 3;
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	height: 300px;
+	background: red;
+ }
+
+ .numer2 {
+	order: 2;
+	background: navy;
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	height: 300px; 
+}
+
+.numer3 {
+	order: 4;
+	background: green;
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	height: 300px; 
+}
+
+  /*.kassi {
+  color: red;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  
+  border: 8px solid red;
+  border-top: 8px solid blue;
+  border-radius: 50%;
+  background: orange;
+  animation: sn├║ningur 10s infinite linear;
+  overflow: hidden; }
+
+@keyframes sn├║ningur {
+  from {
+    transform: translate(0px), 0px rotate(0deg); }
+  to {
+    transform: translate(2000px, 0px) rotate(360deg); } }*/
+
+ /*--------------Buttons ---------------*/
+
+#navigationMenu li{
+	list-style:none;
+	height:39px;
+	padding:2px;
+	width:40px;
+}
+
+#navigationMenu span{
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+  
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+  
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#navigationMenu a{
+	background:url('img/navigation.jpg') no-repeat;
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
+}
+/* General hover styles */
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+  text-decoration:none;
+  /* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+#navigationMenu .home { background-position:0 0;}
+#navigationMenu .home:hover { background-position:0 -39px;}
+#navigationMenu .home span{
+	background-color:#7da315;
+	color:#3d4f0c;
+	text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+#navigationMenu .about { background-position:-38px 0;}
+#navigationMenu .about:hover { background-position:-38px -39px;}
+#navigationMenu .about span{
+	background-color:#1e8bb4;
+	color:#223a44;
+	text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+#navigationMenu .contact { background-position:-152px 0;}
+#navigationMenu .contact:hover { background-position:-152px -39px;}
+#navigationMenu .contact span{
+	background-color:#af1e83;
+	color:#460f35;
+	text-shadow:1px 1px 0 #d244a6;
+}
+
+/* The styles below are only needed for the demo page */
+#buttons{
+	margin:80px auto;
+	position:absolute;
+	bottom: 400px;
+	left: -30px;
+	width:100px;
+}
+
+@media screen and (max-width: 400px) {
+
+	.numer1, .numer2, .numer3 {
+	    width: 100%;
+	    height: 100px; 
+	}
+    .smallContainer{ display: inline; }
+   .home{ border: solid block 1px; }
+	#buttons{ display: none; }
+
+  	label {
+	    display: inline;
+	    position: fixed;
+	    bottom: 0;
+	    left: 0px;
+	    font-size: 1.5em;
+	    width: 100%;
+	    border: 1px solid gray;
+	    border-radius: 2px;
+	    background: silver;
+	    text-align: center;
+	    font-weight: bold;
+	    z-index: 1; 
+	}
+
+  	.valmynd {
+	    display: inline;
+	    text-align: center;
+	    display: flex;
+	    flex-flow: column;
+	    position: fixed;
+	    bottom: -15em;
+	    left: 0;
+	    overflow: hidden;
+	    transition: all 1s ease;
+	    padding-top: 20px;
+	    margin: 0;
+	    width: 100%;  
+	}
+
+  	.valmynd li {
+	    border: 0.5px solid navy;
+	    width: 100%;
+	    padding: 5px;
+	    text-align: center;
+	    color: white;
+	}
+
+    .link1 {
+	  	color: navy;
+	  	text-decoration: none; 
+  	}
+
+  	input:checked ~ .valmynd {
+	    position: fixed;
+	    bottom: 1.3em;
+	    left: 0;
+	    line-height: 40px;
+	}
+
+  	footer {
+	    margin: 0 auto;
+	    padding: none;
+	    height: 240px; 
+    } 
+}
