@@ -12,7 +12,7 @@
 		$username = "1611943609";
 		$password = "mypassword";
 		$db = "1611943609_lokaverkonn3";
-echo" <p>"."konnqqqqq"."</p>";
+
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $db);
 
@@ -25,13 +25,14 @@ echo" <p>"."konnqqqqq"."</p>";
 		$name = $_REQUEST['name'];
 		$netfang = $_REQUEST['email'];
 		$feedback = $_REQUEST['feedback'];
-		echo "<p>"."nafnid er ".$name."</p>";
-		echo" <p>"."netfangi er ".$netfang."</p>";
-		echo" <p>".$feedback."</p>";
+		
 
 		$sql = "INSERT INTO vaelubillinn(name,email,feedback) VALUES ('$name','$netfang','$feedback')";
 		if (mysqli_query($conn, $sql)) {
-    		echo "New record created successfully";
+    		echo '<script language ="javascript">' ;
+    		echo 'alert("lalala")';
+    		echo '</script>';
+    		//header("Location: index.html"); //förum á aðalsíðu
 		} else {
     		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 		}
@@ -51,7 +52,7 @@ echo" <p>"."konnqqqqq"."</p>";
 
 		sleep(1); //tefja um eina sek
 
-		//header("Location: index.html"); //förum á aðalsíðu
+		
 		exit();
 			echo "$netfang";
 
