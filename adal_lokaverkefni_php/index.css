@@ -69,6 +69,11 @@ label{
   background: red;
  }
 
+ .left{
+  width: 50%;
+  border: 1px solid black;
+}
+
 .numer2 {
   order: 2;
   background: navy;
