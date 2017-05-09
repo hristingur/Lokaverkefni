@@ -1,0 +1,129 @@
+*,
+*:after,
+*:before{
+	box-sizing: border-box;
+}
+body{
+	margin: 0 auto;
+	display: flex;
+    flex-flow: row wrap;
+}
+
+.banner{
+	width: 100%;
+	height: 300px;
+	border: 1px solid red;
+	font-size: 1.4em;
+	background-color: #ff9933;
+
+}
+.banner h1,h2{
+	text-align: center;
+	color: #333333;
+	font-family: Impact, Charcoal, sans-serif;
+}
+.smallcontainer{
+	display: flex;
+	flex-flow: row;
+	border: 1px solid black;
+	
+	width: 100%;
+	height: 500px;
+}
+.left{
+	
+	float: left;
+	border: 3px solid black;
+	width: 50%;
+	height: 100%;
+	background-color: #66b3ff;
+}
+.left h1{
+	text-align: center;
+	font-size: 3em;
+	/*border: 1px solid red;*/
+	color: #333333;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.staffContainer{
+	height: 70%;
+}
+
+.staff
+{
+	text-align: center;
+	padding: 5%;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.face{
+	height: 100%;
+	border: 1px solid black;
+}
+
+.nafn{
+	text-align: center;
+
+}
+
+.right{
+	padding: 3%;
+	
+	float: left;
+	border: 3px solid black;
+	background-color: yellow;
+	width: 50%;
+	height: 100%;
+}
+
+.something{
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+.right h2{
+	font-family: 'Orbitron', sans-serif;
+}
+.span{
+	color: black;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+	.banner{
+		height: 500px;
+		
+	}
+	#smallcontainer{
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+
+ 
+	}
+	.staff{
+		width: 30%;
+		padding: 15%;
+	}
+.left
+{	
+
+	width: 100%;
+	}
+
+.right{
+	width: 100%;
+}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+	.staff{
+		width: 30%;
+		padding: 15%;
+	}
+}

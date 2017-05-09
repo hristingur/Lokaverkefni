@@ -4,13 +4,26 @@
 	<title>Bæta Við</title>
 </head>
 <body>
-<h1></h1>
+
  	<?php
 
- 		//Tengja við gagnagrunn...
-		$servername = "tsuts.tskoli.is";
-		$username = "1611943609";
-		$password = "mypassword";
+ 		$whitelist = array(
+ 			'127.0.0.1',
+ 			'::1'
+ 		);
+
+ 		if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist))
+ 		{
+			$servername = "tsuts.tskoli.is";
+			$username = "1611943609";
+			$password = "mypassword";
+ 		}
+ 		else
+ 		{
+ 			$servername = "localhost";
+			$username = "root";
+			$password = "";
+ 		}
 		$db = "1611943609_lokaverkonn3";
 
 		// Create connection
@@ -21,21 +34,27 @@
 		    die("Tenging Mistókst: " . $conn->connect_error);
 		}
 
+		print_r($_REQUEST);
+		$name = $_REQUEST['name'];
+		$netfang = $_REQUEST['email'];
+		$feedback = $_REQUEST['feedback'];
+		
 
-		$netfang = isset($_REQUEST['netfang']);
-		$feedback = isset($_REQUEST['feedback']);
+		$sql = "INSERT INTO vaelubillinn(name,email,feedback) VALUES ('$name','$netfang','$feedback')";
+		if (mysqli_query($conn, $sql)) {
+    		header("Location: index.php"); //förum á aðalsíðu
+		} else {
+    		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+		}
 
-		//print($netfang);debug
 
-		$sql = "INSERT INTO vaelubillinn (netfang,feedback) VALUES ('$netfang','$feedback')";
-		$result = $conn->query($sql);
+
 
 		$conn -> close();
 
-		sleep(1); //tefja um eina sek
-		header("Location: index.html"); //förum á aðalsíðu
+		
 		exit();
-
+			
 
  	?>
 
